@@ -1,0 +1,35 @@
+-- Insert data into the tables
+INSERT INTO Case (CaseDate, Description, TypeOfCorruption, Sanctions, OtherDetails) 
+VALUES ('2023-06-14', 'Case description', 'Bribery', 'Fine', 'Other details');
+
+INSERT INTO Actor (ActorName, Role, Position, OtherDetails) 
+VALUES ('John Doe', 'Defendant', 'CEO', 'Other details');
+
+INSERT INTO Location (LocationName, Coordinates, OtherDetails) 
+VALUES ('City Name', 'Coordinates', 'Other details');
+
+INSERT INTO Action (ActionType, ActionDate, OtherDetails) 
+VALUES ('Action type', '2023-06-14', 'Other details');
+
+INSERT INTO Facilitating_Factors (FactorType, OtherDetails) 
+VALUES ('Factor type', 'Other details');
+
+INSERT INTO Consequences (ConsequenceType, OtherDetails) 
+VALUES ('Consequence type', 'Other details');
+
+-- Get the IDs of the inserted records
+-- Note: In a real application, you would probably use a SELECT statement to get these IDs based on some unique attribute, not just assume they are 1.
+INSERT INTO Actor_Case (ActorID, CaseID) 
+VALUES (1, 1);
+
+INSERT INTO Case_Location (CaseID, LocationID) 
+VALUES (1, 1);
+
+INSERT INTO Actor_Action (ActorID, ActionID) 
+VALUES (1, 1);
+
+INSERT INTO Case_Factor (CaseID, FactorID) 
+VALUES (1, 1);
+
+INSERT INTO Case_Consequence (CaseID, ConsequenceID) 
+VALUES (1, 1);
