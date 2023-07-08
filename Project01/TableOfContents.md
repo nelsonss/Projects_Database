@@ -3,7 +3,7 @@
 1. [Project Overview](#project-overview)
 2. [Problem Statement and Requirements](ProblemStatementAndRequirements.md)
 3. [Conceptual Design](ConceptualDesign.md)
-4. [Data Model](#data-model)
+4. [Data Model](DataModelDetail.md)
 5. [Database Implementation](#database-implementation)
 6. [Queries](#queries)
 7. [Future Work](#future-work)
