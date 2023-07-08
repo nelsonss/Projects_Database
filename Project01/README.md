@@ -8,7 +8,7 @@
 5. [Database Implementation](SQL_DDL_commands)
 6. [Queries](SQL_SELECT_commands.md)
 7. [Future Work](#future-work)
-8. [Contributing](#contributing)
+8. [Contributions](#Contributions)
 9. [License](#license)
 
 ## Project Overview
