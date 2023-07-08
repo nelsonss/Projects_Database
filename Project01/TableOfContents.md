@@ -4,7 +4,7 @@
 2. [Problem Statement and Requirements](ProblemStatementAndRequirements.md)
 3. [Conceptual Design](ConceptualDesign.md)
 4. [Data Model](DataModelDetail.md)
-5. [Database Implementation](#database-implementation)
+5. [Database Implementation](SQL_DDL_commands)
 6. [Queries](#queries)
 7. [Future Work](#future-work)
 8. [Contributing](#contributing)
