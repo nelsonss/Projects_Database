@@ -2,6 +2,8 @@
 
 This document provides a detailed description of the data model used in our corruption case analysis system. It includes a description of each entity and attribute, the data types used, and the relationships between the entities.
 
+![Data Model Diagram 1](dataModel.png)
+
 ## Entities and Attributes
 
 1. **Case:** 
@@ -54,3 +56,5 @@ This document provides a detailed description of the data model used in our corr
 5. **Results In:** This relationship connects cases to consequences. It indicates that a case resulted in a specific consequence.
 
 Please note that this is a high-level overview of the data model. The actual implementation may include additional entities, attributes, and relationships to accommodate specific requirements and constraints.
+
+![Data Model Diagram 2](dataModel2.png)
