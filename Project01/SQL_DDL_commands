@@ -1,0 +1,79 @@
+-- Create the database
+CREATE DATABASE CorruptionCases;
+
+-- Connect to the new database
+\c CorruptionCases;
+
+-- Create the tables
+CREATE TABLE Case (
+  CaseID SERIAL PRIMARY KEY,
+  CaseDate DATE,
+  Description TEXT,
+  TypeOfCorruption VARCHAR(255),
+  Sanctions TEXT,
+  OtherDetails TEXT
+);
+
+CREATE TABLE Actor (
+  ActorID SERIAL PRIMARY KEY,
+  ActorName VARCHAR(255),
+  Role VARCHAR(255),
+  Position VARCHAR(255),
+  OtherDetails TEXT
+);
+
+CREATE TABLE Location (
+  LocationID SERIAL PRIMARY KEY,
+  LocationName VARCHAR(255),
+  Coordinates VARCHAR(255),
+  OtherDetails TEXT
+);
+
+CREATE TABLE Action (
+  ActionID SERIAL PRIMARY KEY,
+  ActionType VARCHAR(255),
+  ActionDate DATE,
+  OtherDetails TEXT
+);
+
+CREATE TABLE Facilitating_Factors (
+  FactorID SERIAL PRIMARY KEY,
+  FactorType VARCHAR(255),
+  OtherDetails TEXT
+);
+
+CREATE TABLE Consequences (
+  ConsequenceID SERIAL PRIMARY KEY,
+  ConsequenceType VARCHAR(255),
+  OtherDetails TEXT
+);
+
+CREATE TABLE Actor_Case (
+  ActorID INT REFERENCES Actor(ActorID),
+  CaseID INT REFERENCES Case(CaseID),
+  PRIMARY KEY (ActorID, CaseID)
+);
+
+CREATE TABLE Case_Location (
+  CaseID INT REFERENCES Case(CaseID),
+  LocationID INT REFERENCES Location(LocationID),
+  PRIMARY KEY (CaseID, LocationID)
+);
+
+CREATE TABLE Actor_Action (
+  ActorID INT REFERENCES Actor(ActorID),
+  ActionID INT REFERENCES Action(ActionID),
+  PRIMARY KEY (ActorID, ActionID)
+);
+
+CREATE TABLE Case_Factor (
+  CaseID INT REFERENCES Case(CaseID),
+  FactorID INT REFERENCES Facilitating_Factors(FactorID),
+  PRIMARY KEY (CaseID, FactorID)
+);
+
+CREATE TABLE Case_Consequence (
+  CaseID INT REFERENCES Case(CaseID),
+  ConsequenceID INT REFERENCES Consequences(ConsequenceID),
+  PRIMARY KEY (CaseID, ConsequenceID)
+);
