@@ -1,4 +1,4 @@
-# Consultas
+# Queries
 
 | Query Description (English) | SQL Equivalent |
 | --------------------------- | -------------- |
