@@ -77,3 +77,36 @@ CREATE TABLE Case_Consequence (
   ConsequenceID INT REFERENCES Consequences(ConsequenceID),
   PRIMARY KEY (CaseID, ConsequenceID)
 );
+-- Create the CorruptionCase table
+CREATE TABLE CorruptionCase (
+    id SERIAL PRIMARY KEY,
+    case_name VARCHAR(255) NOT NULL,
+    case_description TEXT,
+    case_date DATE
+);
+
+-- Create the Involvement table
+CREATE TABLE Involvement (
+    id SERIAL PRIMARY KEY,
+    corruption_case_id INT REFERENCES CorruptionCase(id),
+    individual_id INT REFERENCES Individual(id),
+    organization_id INT REFERENCES Organization(id),
+    involvement_type VARCHAR(255),
+    involvement_description TEXT
+);
+
+-- Create the Individual table
+CREATE TABLE Individual (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    role VARCHAR(255),
+    description TEXT
+);
+
+-- Create the Organization table
+CREATE TABLE Organization (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    type VARCHAR(255),
+    description TEXT
+);
