@@ -45,8 +45,10 @@ In designing the user interface, we focused on:
 ## Using DBML
 
 Quick and simple free tool to help you draw your database relationship diagrams and flow quickly using simple DSL language
+
 // Use DBML to define your database structure
 // Docs: https://dbml.dbdiagram.io/docs
+
 Table Incident {
   IncidentID int [pk, increment] // primary key with auto increment
   Date date
