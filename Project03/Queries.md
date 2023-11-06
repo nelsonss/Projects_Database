@@ -39,7 +39,7 @@ JOIN IncidentSuspect ON Incident.IncidentID = IncidentSuspect.IncidentID
 JOIN Suspect ON IncidentSuspect.SuspectID = Suspect.SuspectID
 GROUP BY Incident.IncidentID
 HAVING COUNT(Suspect.SuspectID) > 1;
-
+```
 
 ##  Advanced Queries
 
