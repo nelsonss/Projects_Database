@@ -24,7 +24,7 @@ For details on how to use the platform, refer to the [User Guide](docs/User_Guid
 
 ## Contributing
 
-We welcome contributions to the CrimeScope Analytics Platform. Please read [Contributing](docs/Contributions.md) for details on our code of conduct, and the process for submitting pull requests to us.
+We welcome contributions to the CrimeScope Analytics Platform.
 
 ## License
 
