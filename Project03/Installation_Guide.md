@@ -2,7 +2,7 @@
 
 To avoid execution errors due to foreign key constraints in PostgreSQL, you should create the tables in an order that ensures any given table is created before other tables that reference it. Here's a suggested sequence for the provided schema:
 
-## Create tables that do not have any foreign keys pointing to them:
+### Create tables that do not have any foreign keys pointing to them:
 
 Country
 Ethnicity
@@ -10,7 +10,7 @@ Category
 Rank
 ReportStatus
 
-## Create tables that have foreign keys pointing only to the tables created in step 1:
+### Create tables that have foreign keys pointing only to the tables created in step 1:
 
 State
 IncidentType
@@ -18,12 +18,12 @@ Continue with tables that depend on the ones from the previous steps:
 City
 District
 
-## Then create tables that depend on the ones from the previous steps:
+### Then create tables that depend on the ones from the previous steps:
 Location
 Now create tables that have foreign keys pointing to the tables created in the previous steps:
 Incident
 
-## Create tables that represent entities that can exist independently
+### Create tables that represent entities that can exist independently
 
 (although they have foreign keys, they are not dependent on the Incident table for their existence):
 Suspect
@@ -48,7 +48,7 @@ CREATE DATABASE "CrimeAnalysis_V1"
     IS_TEMPLATE = False;
 ```sql
 
-## Create tables
+### Create tables
 ```sql
 CREATE TABLE Country (
   CountryID SERIAL PRIMARY KEY,
@@ -162,7 +162,7 @@ CREATE TABLE IncidentOfficer (
 ```
 
 
-##  Inserting test data
+### Inserting test data
 ```sql
 INSERT INTO Country (Name) VALUES ('Colombia');
 
@@ -220,7 +220,7 @@ INSERT INTO IncidentSuspect (IncidentID, SuspectID, Role) VALUES (1, 1, 'Perpetr
 INSERT INTO IncidentVictim (IncidentID, VictimID, Description) VALUES (1, 1, 'Robbery Victim');
 INSERT INTO IncidentOfficer (IncidentID, OfficerID, ResponseRole) VALUES (1, 1, 'Responder');
 ```
-##  Perform simple queries to find out basic data
+### Perform simple queries to find out basic data
 ```sql
 SELECT *
 FROM State;
