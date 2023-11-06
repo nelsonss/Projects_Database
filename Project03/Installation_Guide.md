@@ -220,4 +220,34 @@ INSERT INTO IncidentSuspect (IncidentID, SuspectID, Role) VALUES (1, 1, 'Perpetr
 INSERT INTO IncidentVictim (IncidentID, VictimID, Description) VALUES (1, 1, 'Robbery Victim');
 INSERT INTO IncidentOfficer (IncidentID, OfficerID, ResponseRole) VALUES (1, 1, 'Responder');
 ```
-
+##  Perform simple queries to find out basic data
+```sql
+SELECT *
+FROM State;
+SELECT * 
+FROM City;
+SELECT * 
+FROM District;
+SELECT * 
+FROM Location;
+SELECT * 
+FROM ReportStatus;
+SELECT * 
+FROM Category;
+SELECT * 
+FROM IncidentType;
+SELECT * 
+FROM  Incident;
+SELECT * 
+FROM Ethnicity;
+SELECT * 
+FROM  Suspect;
+SELECT * 
+FROM Victim;
+SELECT * 
+FROM  Rank;
+SELECT * 
+FROM  Officer;
+SELECT * 
+FROM  IncidentSuspect;
+```
