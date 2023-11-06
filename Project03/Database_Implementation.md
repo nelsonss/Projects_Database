@@ -119,6 +119,3 @@ CREATE TABLE IncidentOfficer (
 );
 
 
--- Continue with other table definitions...
-
-
