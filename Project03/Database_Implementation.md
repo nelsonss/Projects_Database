@@ -119,7 +119,7 @@ CREATE TABLE IncidentOfficer (
 );
 ```
 
-## Schema Definition
+## Inserting test data
 ```sql
 -- Inserting countries
 INSERT INTO Country (Name) VALUES ('Colombia');
