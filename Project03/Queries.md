@@ -9,6 +9,7 @@ Simple queries are designed to retrieve basic information from the database with
 ### Retrieve All Incidents
 ```sql
 SELECT * FROM Incident;
+```
 
 ### List of Suspects in a Specific Incident
 ```sql
@@ -16,7 +17,7 @@ SELECT Suspect.Name
 FROM Suspect
 JOIN IncidentSuspect ON Suspect.SuspectID = IncidentSuspect.SuspectID
 WHERE IncidentSuspect.IncidentID = 1;
-
+```
 
 ##  Intermediate Queries
 Intermediate queries involve some level of complexity, such as joins across multiple tables or basic aggregations.
@@ -28,6 +29,7 @@ FROM Incident
 JOIN Location ON Incident.LocationID = Location.LocationID
 JOIN District ON Location.DistrictID = District.DistrictID
 GROUP BY District.Name;
+```
 
 ### Details of Incidents Involving Multiple Suspects
 ```sql
