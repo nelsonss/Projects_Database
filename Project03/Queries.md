@@ -51,6 +51,7 @@ SELECT EXTRACT(YEAR FROM Incident.Date) AS Year, COUNT(*) AS TotalIncidents
 FROM Incident
 GROUP BY Year
 ORDER BY Year;
+```
 
 ### Correlation Between Crime Type and Time of Day
 ```sql
@@ -59,3 +60,4 @@ FROM Incident
 JOIN IncidentType ON Incident.IncidentTypeID = IncidentType.IncidentTypeID
 GROUP BY IncidentType.Description, Hour
 ORDER BY IncidentType.Description, Hour;
+```
