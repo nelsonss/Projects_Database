@@ -10,6 +10,13 @@ Simple queries are designed to retrieve basic information from the database with
 ```sql
 SELECT * FROM Incident;
 ```
+### Retrieve all incidents from a specific district:
+```sql
+SELECT * FROM Incident
+JOIN Location ON Incident.LocationID = Location.LocationID
+JOIN District ON Location.DistrictID = District.DistrictID
+WHERE District.Name = 'Chapinero';
+```
 
 ### List of Suspects in a Specific Incident
 ```sql
@@ -17,6 +24,13 @@ SELECT Suspect.Name
 FROM Suspect
 JOIN IncidentSuspect ON Suspect.SuspectID = IncidentSuspect.SuspectID
 WHERE IncidentSuspect.IncidentID = 1;
+```
+### Count the number of incidents by type:
+```sql
+SELECT IncidentType.Description, COUNT(*) as IncidentCount
+FROM Incident
+JOIN IncidentType ON Incident.IncidentTypeID = IncidentType.IncidentTypeID
+GROUP BY IncidentType.Description
 ```
 
 ##  Intermediate Queries
@@ -30,6 +44,16 @@ JOIN Location ON Incident.LocationID = Location.LocationID
 JOIN District ON Location.DistrictID = District.DistrictID
 GROUP BY District.Name;
 ```
+### Retrieve the number of incidents by district and category:
+```sql
+SELECT District.Name, Category.Name, COUNT(*) as IncidentCount
+FROM Incident
+JOIN Location ON Incident.LocationID = Location.LocationID
+JOIN District ON Location.DistrictID = District.DistrictID
+JOIN IncidentType ON Incident.IncidentTypeID = IncidentType.IncidentTypeID
+JOIN Category ON IncidentType.CategoryID = Category.CategoryID
+GROUP BY District.Name, Category.Name;
+```s
 
 ### Details of Incidents Involving Multiple Suspects
 ```sql
@@ -39,6 +63,15 @@ JOIN IncidentSuspect ON Incident.IncidentID = IncidentSuspect.IncidentID
 JOIN Suspect ON IncidentSuspect.SuspectID = Suspect.SuspectID
 GROUP BY Incident.IncidentID
 HAVING COUNT(Suspect.SuspectID) > 1;
+```
+### Find the average age of victims for each type of incident
+```sql
+SELECT IncidentType.Description, AVG(Victim.Age) as AverageVictimAge
+FROM Incident
+JOIN IncidentVictim ON Incident.IncidentID = IncidentVictim.IncidentID
+JOIN Victim ON IncidentVictim.VictimID = Victim.VictimID
+JOIN IncidentType ON Incident.IncidentTypeID = IncidentType.IncidentTypeID
+GROUP BY IncidentType.Description;
 ```
 
 ##  Advanced Queries
