@@ -12,8 +12,7 @@ CrimeScope Analytics Platform is an advanced analytical tool designed to aid law
 4. [Database Implementation](Database_Implementation.md)
 5. [Queries](Queries.md)
 6. [Future Work](Future_Work.md)
-7. [Contributions](Contributions.md)
-8. [License](License.md)
+
 
 ## Getting Started
 
