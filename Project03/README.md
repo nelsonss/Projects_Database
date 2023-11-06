@@ -7,20 +7,20 @@ CrimeScope Analytics Platform is an advanced analytical tool designed to aid law
 ## Table of Contents
 
 1. [Problem Statement and Requirements](content/Problem_Statement_and_Requirements.md)
-2. [Conceptual Design](Conceptual_Design.md)
-3. [Data Model](Data_Model.md)
-4. [Database Implementation](Database_Implementation.md)
-5. [Queries](Queries.md)
-6. [Future Work](Future_Work.md)
+2. [Conceptual Design](content/Conceptual_Design.md)
+3. [Data Model](content/Data_Model.md)
+4. [Database Implementation](content/Database_Implementation.md)
+5. [Queries](content/Queries.md)
+6. [Future Work](content/Future_Work.md)
 
 
 ## Getting Started
 
-To get started with CrimeScope Analytics Platform, please follow the instructions in the [Installation Guide](Installation_Guide.md).
+To get started with CrimeScope Analytics Platform, please follow the instructions in the [Installation Guide](content/Installation_Guide.md).
 
 ## Usage
 
-For details on how to use the platform, refer to the [User Guide](docs/User_Guide.md).
+For details on how to use the platform, refer to the [User Guide](content/User_Guide.md).
 
 ## Contributing
 
@@ -28,7 +28,7 @@ We welcome contributions to the CrimeScope Analytics Platform.
 
 ## License
 
-This project is licensed under the [LICENSE](LICENSE.md) - see the [License](docs/License.md) file for details.
+This project is licensed under the [LICENSE](content/LICENSE.md) - see the [License](content//License.md) file for details.
 
 ## Acknowledgments
 
