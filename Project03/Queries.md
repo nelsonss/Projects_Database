@@ -53,7 +53,7 @@ JOIN District ON Location.DistrictID = District.DistrictID
 JOIN IncidentType ON Incident.IncidentTypeID = IncidentType.IncidentTypeID
 JOIN Category ON IncidentType.CategoryID = Category.CategoryID
 GROUP BY District.Name, Category.Name;
-```s
+```
 
 ### Details of Incidents Involving Multiple Suspects
 ```sql
@@ -73,7 +73,15 @@ JOIN Victim ON IncidentVictim.VictimID = Victim.VictimID
 JOIN IncidentType ON Incident.IncidentTypeID = IncidentType.IncidentTypeID
 GROUP BY IncidentType.Description;
 ```
-
+### List incidents that have more than one suspect:
+```sql
+SELECT Incident.IncidentID, COUNT(IncidentSuspect.SuspectID) as SuspectCount
+FROM Incident
+JOIN IncidentSuspect ON Incident.IncidentID = IncidentSuspect.IncidentID
+GROUP BY Incident.IncidentID
+HAVING COUNT(IncidentSuspect.SuspectID) > 1;
+```
+ 
 ##  Advanced Queries
 
 Advanced queries are the most complex, often involving multiple join operations, subqueries, complex aggregations, and analytical functions.
@@ -84,6 +92,37 @@ SELECT EXTRACT(YEAR FROM Incident.Date) AS Year, COUNT(*) AS TotalIncidents
 FROM Incident
 GROUP BY Year
 ORDER BY Year;
+```
+### Find the top 5 districts with the highest number of incidents:
+```sql
+WITH DistrictIncidents AS (
+    SELECT District.Name, COUNT(*) as IncidentCount
+    FROM Incident
+    JOIN Location ON Incident.LocationID = Location.LocationID
+    JOIN District ON Location.DistrictID = District.DistrictID
+    GROUP BY District.Name
+)
+SELECT Name, IncidentCount
+FROM DistrictIncidents
+ORDER BY IncidentCount DESC
+LIMIT 5
+```
+### Rank officers by the number of incidents they have attended:
+```sql
+SELECT Officer.Name, COUNT(*) as IncidentsAttended,
+RANK() OVER (ORDER BY COUNT(*) DESC) as Rank
+FROM IncidentOfficer
+JOIN Officer ON IncidentOfficer.OfficerID = Officer.OfficerID
+GROUP BY Officer.Name;
+```
+### Determine the monthly trend of a specific type of crime:
+```sql
+SELECT EXTRACT(YEAR FROM Date) as Year, EXTRACT(MONTH FROM Date) as Month, COUNT(*) as IncidentCount
+FROM Incident
+JOIN IncidentType ON Incident.IncidentTypeID = IncidentType.IncidentTypeID
+WHERE IncidentType.Description = 'Burglary'
+GROUP BY Year, Month
+ORDER BY Year, Month;
 ```
 
 ### Correlation Between Crime Type and Time of Day
