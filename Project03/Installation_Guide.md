@@ -46,9 +46,10 @@ CREATE DATABASE "CrimeAnalysis_V1"
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
-```sql
+```
 
 5. Create tables
+   
 ```sql
 CREATE TABLE Country (
   CountryID SERIAL PRIMARY KEY,
@@ -161,7 +162,6 @@ CREATE TABLE IncidentOfficer (
 );
 ```
 
-
 6. Inserting test data
 ```sql
 INSERT INTO Country (Name) VALUES ('Colombia');
@@ -220,7 +220,9 @@ INSERT INTO IncidentSuspect (IncidentID, SuspectID, Role) VALUES (1, 1, 'Perpetr
 INSERT INTO IncidentVictim (IncidentID, VictimID, Description) VALUES (1, 1, 'Robbery Victim');
 INSERT INTO IncidentOfficer (IncidentID, OfficerID, ResponseRole) VALUES (1, 1, 'Responder');
 ```
+
 7. Perform simple queries to find out basic data
+
 ```sql
 SELECT *
 FROM State;
