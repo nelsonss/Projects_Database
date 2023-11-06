@@ -8,6 +8,9 @@ The data model for the CrimeScope Analytics Platform was meticulously crafted to
 
 Our data model consists of several key entities, each with a set of carefully chosen attributes to capture the necessary details for comprehensive crime analysis:
 
+![Data Model Visualization](DBML_model.png)
+
+
 ### Incident
 - **IncidentID**: A unique identifier for each incident.
 - **Date**: The date on which the incident occurred.
