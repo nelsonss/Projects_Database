@@ -42,6 +42,128 @@ In designing the user interface, we focused on:
 1. **Simplicity**: A clean and straightforward layout that allows users to navigate the system without overwhelming them with information.
 2. **Query Building**: An intuitive query builder that guides users through the creation of complex queries without requiring advanced technical knowledge.
 3. **Visualization Tools**: Incorporation of visualization tools such as maps and charts to help users interpret data patterns and trends.
+## Using DBML
+
+Quick and simple free tool to help you draw your database relationship diagrams and flow quickly using simple DSL language
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+Table Incident {
+  IncidentID int [pk, increment] // primary key with auto increment
+  Date date
+  Time time
+  IncidentTypeID int [ref: > IncidentType.IncidentTypeID] // foreign key reference
+  LocationID int [ref: > Location.LocationID] // foreign key reference
+  ReportStatusID int [ref: > ReportStatus.ReportStatusID] // foreign key reference
+}
+
+Table IncidentType {
+  IncidentTypeID int [pk, increment]
+  Description varchar
+  CategoryID int [ref: > Category.CategoryID]
+}
+
+Table Category {
+  CategoryID int [pk, increment]
+  Name varchar
+}
+
+Table Location {
+  LocationID int [pk, increment]
+  Address varchar
+  DistrictID int [ref: > District.DistrictID]
+  Latitude float
+  Longitude float
+}
+
+Table District {
+  DistrictID int [pk, increment]
+  Name varchar
+  CityID int [ref: > City.CityID]
+}
+
+Table City {
+  CityID int [pk, increment]
+  Name varchar
+  StateID int [ref: > State.StateID]
+}
+
+Table State {
+  StateID int [pk, increment]
+  Name varchar
+  CountryID int [ref: > Country.CountryID]
+}
+
+Table Country {
+  CountryID int [pk, increment]
+  Name varchar
+}
+
+Table ReportStatus {
+  ReportStatusID int [pk, increment]
+  Status varchar
+}
+
+Table Suspect {
+  SuspectID int [pk, increment]
+  Name varchar
+  Age int
+  Gender varchar
+  EthnicityID int [ref: > Ethnicity.EthnicityID]
+}
+
+Table Ethnicity {
+  EthnicityID int [pk, increment]
+  Description varchar
+}
+
+Table Victim {
+  VictimID int [pk, increment]
+  Name varchar
+  Age int
+  Gender varchar
+  EthnicityID int [ref: > Ethnicity.EthnicityID]
+}
+
+Table Officer {
+  OfficerID int [pk, increment]
+  Name varchar
+  RankID int [ref: > Rank.RankID]
+}
+
+Table Rank {
+  RankID int [pk, increment]
+  Title varchar
+}
+
+// Junction table for many-to-many relationship between Suspect and Incident
+Table IncidentSuspect {
+  IncidentID int [ref: > Incident.IncidentID] // foreign key to Incident table
+  SuspectID int [ref: > Suspect.SuspectID] // foreign key to Suspect table
+  Role varchar // additional information about the suspect's role in the incident
+  Indexes {
+    (IncidentID, SuspectID) [pk] // composite primary key
+  }
+}
+
+// Junction table for many-to-many relationship between Victim and Incident
+Table IncidentVictim {
+  IncidentID int [ref: > Incident.IncidentID] // foreign key to Incident table
+  VictimID int [ref: > Victim.VictimID] // foreign key to Victim table
+  Description varchar // additional information about the victim's involvement
+  Indexes {
+    (IncidentID, VictimID) [pk] // composite primary key
+  }
+}
+
+// Junction table for many-to-many relationship between Officer and Incident
+Table IncidentOfficer {
+  IncidentID int [ref: > Incident.IncidentID] // foreign key to Incident table
+  OfficerID int [ref: > Officer.OfficerID] // foreign key to Officer table
+  ResponseRole varchar // additional information about the officer's role
+  Indexes {
+    (IncidentID, OfficerID) [pk] // composite primary key
+  }
+}
 
 ## Conclusion
 
