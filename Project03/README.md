@@ -39,9 +39,6 @@ This project is licensed under the [LICENSE](LICENSE.md) - see the [License](doc
 
 ## Contact
 
-For any inquiries, please reach out to [contact@example.com](mailto:contact@example.com).
+For any inquiries, please reach out to [nelson.sanchez@uniandes.edu.co](mailto:nelson.sanchez@uniandes.edu.co).
 
----
-
-Please note that the links to `.md` files are placeholders and should be replaced with the actual paths to the documentation files within your project repository.
 
