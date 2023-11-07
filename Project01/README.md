@@ -15,6 +15,8 @@
 
 This project aims to develop a comprehensive system for analyzing corruption cases. The system is designed to store, manage, and analyze a wide range of information about corruption cases, including the individuals and organizations involved, the nature of the corruption, and the consequences of the corruption.
 
+![analyzing corruption cases](content/corruption.png)
+
 ## Problem Statement
 
 Corruption is a pervasive problem that affects many sectors of society. However, analyzing corruption cases can be challenging due to the complexity and diversity of these cases. This project seeks to address this problem by providing a robust and flexible system for corruption case analysis.
