@@ -8,6 +8,8 @@ Construction of an information system supported by database technologies and foc
 
 This document outlines the development process of an information system supported by database technologies. The system is designed to capture, process, and generate indicators for open-field and greenhouse tomato production systems in the Villa de Leyva and Norte de Santander regions of Colombia. The information system acts as a support mechanism, generating data products that aid in diagnosing various aspects of tomato production systems, including social and economic factors.
 
+![UX](https://github.com/nelsonss/Projects_Database/blob/main/Project02/content/w1.JPG)
+
 ## Introduction
 
 The inception of an information system stems from the need to compile information on the various agents involved in the tomato production and marketing chain. The system records information by type of production system, identifies essential aspects or components, and integrates all information into a database. This database is then used for subsequent report generation and indicator development. Some data includes associated geographical information, enabling further analysis using Geographic Information Systems (GIS). The following sections describe the process followed for structuring the data component of the information system.
