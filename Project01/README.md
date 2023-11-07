@@ -1,4 +1,7 @@
 # Corruption Case Analysis System
+
+![analyzing corruption cases](content/corruption.jpg)
+
 # Table of Contents
 
 1. [Project Overview](#project-overview)
