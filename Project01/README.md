@@ -47,6 +47,7 @@ Future work on this project will focus on refining the data model and analysis m
 ## Contributions
 
 We welcome contributions to this project. If you are interested in contributing, please see the CONTRIBUTING.md file for guidelines.
+For any inquiries, please reach out to nelson.sanchez@uniandes.edu.co.
 
 ## License
 
