@@ -22,4 +22,5 @@ The database design methodology applied in this project begins with the specific
 ![UX](https://github.com/nelsonss/Projects_Database/blob/main/Project02/content/img03-Informe.JPG)
 
 The ER model is diagrammed in such a way that it is independent of the final database software where it will be built. This allows for scalable construction in various database products, including commercial offerings like Microsoft Access, SQL Server, Oracle, DB2, and open-source tools like MySQL or PostgreSQL.
+![UX](https://github.com/nelsonss/Projects_Database/blob/main/Project02/content/img04-Informe.JPG)
 
