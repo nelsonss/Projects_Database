@@ -5,7 +5,7 @@
 
 ## Overview
 
-CrimeScope Analytics Platform is an advanced analytical tool designed to aid law enforcement agencies in crime data analysis and prediction. It integrates data from various sources into a unified database, allowing for complex queries and in-depth crime pattern analysis.
+CrimeScope Analytics Platform is an advanced analytical tool designed to aid law enforcement agencies in **crime data analysis** and prediction. It integrates data from various sources into a unified database, allowing for complex queries and in-depth crime pattern analysis.
 
 ## Table of Contents
 
