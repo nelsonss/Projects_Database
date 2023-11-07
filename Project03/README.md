@@ -34,7 +34,7 @@ We welcome contributions to the CrimeScope Analytics Platform.
 
 ## License
 
-This project is licensed under the [LICENSE](content/LICENSE.md) - see the [License](content//License.md) file for details.
+This project is licensed under the terms of the MIT license. See the LICENSE file for details.
 
 ## Acknowledgments
 
