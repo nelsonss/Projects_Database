@@ -1,5 +1,9 @@
 # CrimeScope Analytics Platform
 
+![CrimeScope](content/Predictive-Policing-CU.jpg)
+
+Image: https://online.campbellsville.edu/criminal-justice/predictive-policing/
+
 ## Overview
 
 CrimeScope Analytics Platform is an advanced analytical tool designed to aid law enforcement agencies in crime data analysis and prediction. It integrates data from various sources into a unified database, allowing for complex queries and in-depth crime pattern analysis.
