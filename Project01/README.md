@@ -16,7 +16,7 @@
 
 ## Project Overview
 
-This project aims to develop a comprehensive system for analyzing corruption cases. The system is designed to store, manage, and analyze a wide range of information about corruption cases, including the individuals and organizations involved, the nature of the corruption, and the consequences of the corruption.
+This project aims to develop a comprehensive system for analyzing **corruption cases**. The system is designed to store, manage, and analyze a wide range of information about corruption cases, including the individuals and organizations involved, the nature of the corruption, and the consequences of the corruption.
 
 ![analyzing corruption cases](content/corruption.png)
 
