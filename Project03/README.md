@@ -2,7 +2,6 @@
 
 ![CrimeScope](content/Predictive-Policing-CU.jpg)
 
-Image: https://online.campbellsville.edu/criminal-justice/predictive-policing/
 
 ## Overview
 
