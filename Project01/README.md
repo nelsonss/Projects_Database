@@ -2,11 +2,11 @@
 # Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [Problem Statement and Requirements](ProblemStatementAndRequirements.md)
-3. [Conceptual Design](ConceptualDesign.md)
-4. [Data Model](DataModelDetail.md)
-5. [Database Implementation](SQL_DDL_commands)
-6. [Queries](SQL_SELECT_commands.md)
+2. [Problem Statement and Requirements](content/ProblemStatementAndRequirements.md)
+3. [Conceptual Design](content/ConceptualDesign.md)
+4. [Data Model](content/DataModelDetail.md)
+5. [Database Implementation](content/SQL_DDL_commands)
+6. [Queries](content/SQL_SELECT_commands.md)
 7. [Future Work](#future-work)
 8. [Contributions](#Contributions)
 9. [License](#license)
