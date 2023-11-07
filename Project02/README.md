@@ -31,3 +31,4 @@ The ER model is diagrammed in such a way that it is independent of the final dat
 
 ![UX](https://github.com/nelsonss/Projects_Database/blob/main/Project02/content/img04-Informe.JPG)
 
+![UX](https://github.com/nelsonss/Projects_Database/blob/main/Project02/content/w4.JPG)
