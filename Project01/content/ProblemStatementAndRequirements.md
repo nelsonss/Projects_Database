@@ -4,6 +4,8 @@
 
 Corruption is a pervasive issue that affects many sectors of society. It can take many forms and involves a wide range of actors, making it a complex problem to analyze. Traditional methods of analyzing corruption cases often fall short, as they struggle to handle the complexity and diversity of these cases. There is a need for a more robust and flexible system that can store, manage, and analyze a wide range of information about corruption cases.
 
+![Corruption](corruption2.jpg)
+
 ## System Requirements
 
 The system should be able to handle the following requirements:
