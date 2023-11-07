@@ -19,6 +19,9 @@ CrimeScope Analytics Platform is an advanced analytical tool designed to aid law
 
 ## Getting Started
 
+![CrimeScope](content/Predictive-policing-620x300.png)
+
+
 To get started with CrimeScope Analytics Platform, please follow the instructions in the [Installation Guide](content/Installation_Guide.md).
 
 ## Usage
